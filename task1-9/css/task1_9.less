@@ -47,6 +47,7 @@
 .P10_top{
 	padding-top: 10px !important;
 }
+
 html{
 	font-size: 10px;
 }
@@ -176,8 +177,6 @@ nav{
 		padding-left: 31px;
 	}
 	.task_nav_middle{
-		// .border(1px,@gray);
-		// border-collapse: collapse;
 		padding:0;
 		height: 29px;
 		width: 2px;
@@ -192,6 +191,7 @@ nav{
 	li{
 		list-style: none;
 		padding:9px 5px;
+		cursor: pointer;
 	}
 	.nav_first{
 		li{
@@ -253,7 +253,7 @@ nav{
 		    .backUrlImportant();
 		    background-position: -11px -2px !important;
 		}
-	}	
+	}
 }
 
 .task_nav_foldlist > li{
@@ -276,6 +276,13 @@ nav{
 		    background-position:6px -44px !important;
 		}
 	}
+}
+
+.task_nav_foldlist input[id^='fold']{
+	display: none;
+}
+.task_nav_foldlist input[id^='fold']:checked ~ [id^='foldlist']{
+	display: none;
 }
 .task_main{
 	width: 100%;

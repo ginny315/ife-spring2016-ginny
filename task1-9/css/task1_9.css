@@ -169,6 +169,7 @@ nav {
 .task_nav_foldlist li {
   list-style: none;
   padding: 9px 5px;
+  cursor: pointer;
 }
 .task_nav_foldlist .nav_first li {
   margin-left: 20px;
@@ -237,6 +238,12 @@ nav {
 .task_nav_foldlist > li:nth-child(6) figure {
   background: url("http://7xl9oc.com1.z0.glb.clouddn.com/imagescsssprite_1_9.png") no-repeat;
   background-position: 6px -44px !important;
+}
+.task_nav_foldlist input[id^='fold'] {
+  display: none;
+}
+.task_nav_foldlist input[id^='fold']:checked ~ [id^='foldlist'] {
+  display: none;
 }
 .task_main {
   width: 100%;
